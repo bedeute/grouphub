@@ -17,7 +17,7 @@
 @brand-primary:         #428bca;
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
-@brand-warning:         #f0ad4e;
+@brand-warning:         #f46e35;
 @brand-danger:          #d9534f;
 
 
@@ -31,7 +31,7 @@
 @text-color:            @gray-dark;
 
 //** Global textual link color.
-@link-color:            @brand-primary;
+@link-color:            @brand-warning;
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 15%);
 //** Link hover decoration.
@@ -65,8 +65,8 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    inherit;
-@headings-font-weight:    500;
+@headings-font-family:    'Roboto', sans-serif;
+@headings-font-weight:    300;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
 
@@ -151,22 +151,37 @@
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
 @btn-primary-border:             darken(@btn-primary-bg, 5%);
+// custom here
+@btn-primary-border-light:       lighten(@btn-primary-bg, 10%);
 
 @btn-success-color:              #fff;
 @btn-success-bg:                 @brand-success;
 @btn-success-border:             darken(@btn-success-bg, 5%);
+// custom here
+@btn-success-border-light:       lighten(@btn-success-bg, 10%);
 
 @btn-info-color:                 #fff;
 @btn-info-bg:                    @brand-info;
 @btn-info-border:                darken(@btn-info-bg, 5%);
+// custom here
+@btn-info-border-light:          lighten(@btn-info-bg, 10%);
 
 @btn-warning-color:              #fff;
 @btn-warning-bg:                 @brand-warning;
 @btn-warning-border:             darken(@btn-warning-bg, 5%);
+// custom here
+@btn-warning-border-light:       lighten(@btn-warning-bg, 10%);
 
 @btn-danger-color:               #fff;
 @btn-danger-bg:                  @brand-danger;
 @btn-danger-border:              darken(@btn-danger-bg, 5%);
+// custom here
+@btn-danger-border-light:        lighten(@btn-danger-bg, 10%);
+
+// custom here
+@btn-dark-color:              #7c86a0;
+@btn-dark-bg:                 #292c37;
+@btn-dark-border:             darken(@btn-dark-bg, 5%);
 
 @btn-link-disabled-color:        @gray-light;
 
