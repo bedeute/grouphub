@@ -6660,6 +6660,30 @@ body {
 .featured-community-pic:first-child {
   margin-left: 0;
 }
+.unreveal {
+  position: relative;
+  opacity: 0;
+}
+.unreveal-left {
+  left: -100px;
+}
+.unreveal-left.get-revealed {
+  left: 0;
+  opacity: 1;
+  -webkit-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+.unreveal-right {
+  right: -100px;
+}
+.unreveal-right.get-revealed {
+  right: 0;
+  opacity: 1;
+  -webkit-transition: all 1s 0.2s ease-out;
+  -o-transition: all 1s 0.2s ease-out;
+  transition: all 1s 0.2s ease-out;
+}
 .ease-section {
   background: #e07547;
   padding: 20px 0;

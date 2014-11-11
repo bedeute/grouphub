@@ -341,6 +341,41 @@ body {
 	}
 }
 
+.unreveal {
+	position: relative;
+	opacity: 0;
+
+	&-left {
+
+		&:extend(.reveal);
+		left: -100px;
+
+		&.get-revealed {
+			left: 0;
+			opacity: 1;
+		 	.transition(all 1s ease-out);
+		}
+	}
+
+	&-right {
+
+		&:extend(.reveal);
+		right: -100px;
+
+		&.get-revealed {
+			right: 0;
+			opacity: 1;
+		 	.transition(all 1s .2s ease-out);
+		}
+	}
+}
+
+// .get-revealed {
+// 	left: 0;
+// 	opacity: 1;
+//  	.transition(all 2s ease);
+// }
+
 .ease-section {
 	background: #e07547;
 	padding: 20px 0;
