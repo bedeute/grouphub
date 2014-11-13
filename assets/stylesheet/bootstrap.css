@@ -6600,10 +6600,10 @@ body {
 .top-learn-more {
   margin-top: 65px;
 }
-.content-wrapper {
+.introductory-wrapper {
   height: 130px;
 }
-.the-content {
+.introductory-content {
   margin-top: -75px;
   padding-top: 20px;
   padding-bottom: 64px;
@@ -6611,7 +6611,7 @@ body {
   width: 100%;
   background: url(../../assets/img/shadow-box-landing-page.png) no-repeat center bottom;
 }
-.the-content > .container {
+.introductory-content > .container {
   padding-left: 32px;
   padding-right: 32px;
 }
@@ -6674,15 +6674,43 @@ body {
   -o-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
+.unreveal-left.ease-tablet {
+  left: -150px !important;
+}
+.unreveal-left.ease-tablet.get-revealed {
+  -webkit-transition: all 1s 0.2s ease-out;
+  -o-transition: all 1s 0.2s ease-out;
+  transition: all 1s 0.2s ease-out;
+}
 .unreveal-right {
   right: -100px;
 }
 .unreveal-right.get-revealed {
   right: 0;
   opacity: 1;
-  -webkit-transition: all 1s 0.2s ease-out;
-  -o-transition: all 1s 0.2s ease-out;
-  transition: all 1s 0.2s ease-out;
+  -webkit-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+.unreveal-right.ease-mobile {
+  right: -550px !important;
+}
+.unreveal-right.ease-mobile.get-revealed {
+  -webkit-transition: all 1s 0.3s ease-out;
+  -o-transition: all 1s 0.3s ease-out;
+  transition: all 1s 0.3s ease-out;
+}
+.unreveal-base.get-revealed {
+  opacity: 1;
+  -webkit-transition: all 1s 0.4s ease-out;
+  -o-transition: all 1s 0.4s ease-out;
+  transition: all 1s 0.4s ease-out;
+}
+.unreveal-base.ease-desktop.get-revealed {
+  opacity: 1;
+  -webkit-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
 }
 .ease-section {
   background: #e07547;
@@ -6695,15 +6723,22 @@ body {
 .ease-section .ease-mobile {
   position: absolute;
   bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+  left: 0;
+  right: 0;
 }
-.ease-desktop {
-  left: 235px;
+.ease-desktop,
+.unreveal-base.ease-desktop.get-revealed {
+  bottom: 0 !important;
 }
-.ease-tablet {
-  left: 300px;
+.ease-tablet,
+.unreveal-left.ease-tablet.get-revealed {
+  left: -76px !important;
 }
-.ease-mobile {
-  right: 330px;
+.ease-mobile,
+.unreveal-right.ease-mobile.get-revealed {
+  right: -400px !important;
 }
 .bottom-section {
   background: #3d404a;
@@ -6810,8 +6845,14 @@ body {
   text-decoration: none;
   color: #f46e35;
 }
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 680px) {
   .top-simple-nav {
-    margin: 0;
+    margin: 60px auto 30px;
+  }
+  .top-learn-more {
+    margin-top: 16px;
+  }
+  .top-wide {
+    height: 754px;
   }
 }
