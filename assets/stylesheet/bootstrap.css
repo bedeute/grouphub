@@ -6485,6 +6485,7 @@ fieldset[disabled] .btn-fb-connect.active {
 .btn-fb-connect p {
   margin-top: 7px;
   margin-bottom: 7px;
+  font-size: 20px !important;
 }
 .strike {
   display: block;
