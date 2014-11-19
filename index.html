@@ -25,12 +25,48 @@
 	<![endif]-->
 </head>
 <body>
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Login</h4>
+      </div>
+      <div class="modal-body text-center">
+        <button type="button" class="btn btn-fb-connect btn-block"><img src="assets/img/fb-logo.jpg"><p>Connect with <span style="font-weight:500;">Facebook</span></p></button>
+		<div class="strike">
+		    <span>or</span>
+		</div>
+		<div class="input-group-vertical">
+			<input class="form-control input-lg" placeholder="E-mail" name="email" type="text">
+			<input class="form-control input-lg" placeholder="Password" name="password" type="password" value="">
+		</div>
+		<div class="clearfix">
+			<div class="checkbox pull-left">
+			  <label>
+			    <input type="checkbox" value="">
+			    Remember me
+			  </label>
+			</div>
+			<a class="pull-right" href="#" style="margin-top: 10px;">Forget Password?</a>
+		</div>
+		<button type="button" class="btn btn-primary btn-lg btn-block">Login</button>
+      </div>
+      <div class="modal-footer" style="text-align:center !important;">
+		<p>
+			Don't have a wakuwakuw account? <a href="#">Sign up</a>
+		</p>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 <div class="whole">
 	<div class="top-wide">
 		<div class="container">
 			<div class="top-simple-nav">
 				<a href="#" class="btn btn-stealth pull-left" style="padding-left: 30px; padding-right: 30px;">DISCOVER</a>
-				<a href="#" class="btn btn-dark pull-right" style="padding-left: 30px; padding-right: 30px;">Login</a>
+				<a href="#login-modal" data-toggle="modal" data-target="#login-modal" class="btn btn-dark pull-right" style="padding-left: 30px; padding-right: 30px;">Login</a>
 			</div>
 			<div class="row">
 				<div class="col-xs-7">
@@ -59,7 +95,7 @@
 				</div>
 			</div>
 			<div class="text-center top-learn-more">
-				<a href="#" class="btn btn-stealth">learn more<br>
+				<a href="#" class="btn btn-stealth" id="learn-more">learn more<br>
 					<span class="glyphicon glyphicon-arrow-down"></span>
 				</a>
 			</div>
@@ -128,16 +164,16 @@
 	<div class="ease-section then-onscreen">
 		<div class="container">
 			<h2 class="text-center text-pure">And, as ease as you are...</h2>
-			<img class="unreveal unreveal-base ease-desktop" src="assets/img/desktop-dummy.jpg" alt="desktop dummy">
-			<img class="unreveal unreveal-left ease-tablet" src="assets/img/tablet-dummy.jpg" alt="tablet dummy">
-			<img class="unreveal unreveal-right ease-mobile" src="assets/img/mobile-dummy.jpg" alt="mobile dummy">
+			<img class="unreveal unreveal-base ease-desktop" src="assets/img/desktop-dummy.png" alt="desktop dummy">
+			<img class="unreveal unreveal-left ease-tablet" src="assets/img/tablet-dummy.png" alt="tablet dummy">
+			<img class="unreveal unreveal-right ease-mobile" src="assets/img/mobile-dummy.png" alt="mobile dummy">
 		</div>
 	</div>
 	<div class="bottom-section">
 		<div class="container">
 			<h2 class="text-center">So, what are you waiting for<br>Let’s get started...</h2>
 			<div class="text-center">
-				<button type="button" class="btn btn-dark btn-lg">Login</button>
+				<button type="button" data-toggle="modal" data-target="#login-modal" class="btn btn-dark btn-lg">Login</button>
 				<button type="button" class="btn btn-light-edge btn-warning btn-lg">Signup</button>
 			</div>
 			<hr>
@@ -189,5 +225,6 @@
 </div>
 
 <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/modal.js"></script>
 <script src="assets/js/custom-scripts.js"></script>
 </body>
